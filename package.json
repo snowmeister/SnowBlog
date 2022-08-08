@@ -1,0 +1,27 @@
+{
+  "name": "SnowBlog",
+  "version": "1.0.0",
+  "description": "Just a little personal project to investigate a \"static-dynamic\" site, powered by markdowm, with express API and a JS front end.",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.18.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowmeister/SnowBlog.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/snowmeister/SnowBlog/issues"
+  },
+  "homepage": "https://github.com/snowmeister/SnowBlog#readme"
+}
