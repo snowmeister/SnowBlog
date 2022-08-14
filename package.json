@@ -7,7 +7,8 @@
     "lib": "lib"
   },
   "dependencies": {
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "react-markdown": "^8.0.3"
   },
   "devDependencies": {},
   "scripts": {

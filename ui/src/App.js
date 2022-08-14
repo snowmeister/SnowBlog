@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './App.css';
+import Layout from 'components/common/layout';
 
 class App extends Component {
 state = {
@@ -27,12 +28,12 @@ state = {
 
   render() {
     return (
-      <div className="m-0 p-0">
-        <header className="m-0 p-0">
-          <h1 className="text-5xl">Welcome to React</h1>
-        </header>
-        <p className="text-2xl">{this.state.data}</p>
-      </div>
+      <Layout>
+      
+       
+        <p>{this.state.data}</p>
+      
+      </Layout>
     );
   }
 }
