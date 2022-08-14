@@ -15,9 +15,9 @@ import Footer from './footer';
 
 export default function Layout({ children }) {
   return (
-    <div className="m-0 p-0 position-absolute w-full min-h-screen flex flex-col h-full w-full bg-slate-600 text-light">
+    <div className="m-0 p-0 position-absolute w-full min-h-screen flex flex-col align-center h-full w-full bg-slate-600 font-light">
       <Header />
-      <div className='flex flex-row mx-auto justify-center align-center text-slate-100 p-4'>{children}</div>
+      <div className='flex flex-row mx-auto justify-center flex items-center justify-center h-full text-slate-100 p-4'>{children}</div>
       <Footer />
     </div>
       )
