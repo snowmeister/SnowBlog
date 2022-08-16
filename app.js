@@ -11,14 +11,20 @@
  */
 
 
-const express = require('express'); //Line 1
+const express = require('express'); 
 const app = express(); //Line 2
-const port = process.env.PORT || 5000; //Line 3
+const images = require('./routes/images'); 
+const port = process.env.PORT || 5000; 
+
+
+
+
+app.use('/images', images)
 
 // This displays message that the server running and listening to specified port
-app.listen(port, () => console.log(`Listening on port ${port}`)); //Line 6
+app.listen(port, () => console.log(`Listening on port ${port}`));
 
 // create a GET route
 app.get('/express_backend', (req, res) => { //Line 9
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); //Line 10
-}); //Line 11
+  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); 
+}); 

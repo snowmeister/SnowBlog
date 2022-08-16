@@ -11,8 +11,8 @@
  */
 import React from 'react'
 
-export default function Header() {
+export default function Header({color}) {
   return (
-    <div className='flex flex-row justify-center align-center text-slate-100 p-4 text-3xl'>{process.env.REACT_APP_NAME}</div>
+    <div className={`flex flex-row justify-center align-center p-4 text-3xl text-${color}-100 opacity-30`}>{process.env.REACT_APP_NAME}</div>
   )
 }
