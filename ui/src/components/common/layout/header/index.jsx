@@ -9,10 +9,14 @@
  * -----
  * Copyright 2022 - 2022 Mark Kennard
  */
-import React from 'react'
+import React from 'react';
+import ColorPicker from 'components/common/ColorPicker';
 
 export default function Header({color}) {
-  return (
-    <div className={`flex flex-row justify-center align-center p-4 text-3xl text-${color}-100 opacity-30`}>{process.env.REACT_APP_NAME}</div>
+  return (<>
+    <ColorPicker defaultColor={color} />
+    <div className={`flex flex-row justify-center align-center p-4 text-5xl text-${color}-100 opacity-80`}>{process.env.REACT_APP_NAME}</div>
+  </>
+    
   )
 }

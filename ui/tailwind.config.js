@@ -11,11 +11,16 @@ module.exports = {
   safelist: [
     'text-2xl',
     'text-3xl',
+    'text-4xl',
+    'text-5xl',
     {
       pattern: /bg-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink)-(900)/,
     },
     {
-      pattern: /text-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink)-(100)/,
+      pattern: /text-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink)-(100|900)/,
+    },
+    {
+      pattern: /border-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink)-(100)/,
     },
   ],
   theme: {
