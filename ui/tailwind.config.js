@@ -14,7 +14,7 @@ module.exports = {
     'text-4xl',
     'text-5xl',
     {
-      pattern: /bg-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(900)/,
+      pattern: /bg-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100|900)/,
     },
     {
       pattern: /text-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100|900)/,
