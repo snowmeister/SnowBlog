@@ -12,10 +12,13 @@
 import React from 'react';
 import ColorPicker from 'components/common/ColorPicker';
 
-export default function Header({color}) {
+export default function Header({currentColor, clickHandler}) {
+
   return (<>
-    <ColorPicker defaultColor={color} />
-    <div className={`flex flex-row justify-center align-center p-4 text-5xl text-${color}-100 opacity-80`}>{process.env.REACT_APP_NAME}</div>
+    <ColorPicker currentColor={currentColor} colorSelectedHandler={(currentColor)=>{
+      clickHandler(currentColor);
+    }}  />
+    <div className={`flex flex-row justify-center border-${currentColor}-100 align-center p-4 text-5xl text-${currentColor}-100 opacity-80`}>{process.env.REACT_APP_NAME}</div>
   </>
     
   )

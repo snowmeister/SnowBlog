@@ -13,48 +13,35 @@ import Footer from './footer';
 import Header from './header';
 import PropTypes from 'prop-types'
 import React from 'react';
+import { ThemeContext } from 'context/theme';
 
 
 class Layout extends React.Component {
 
-  constructor(props) {
-    super(props);
-    this.state = {
-      color: null
-    };  
-  }
-
-  componentDidMount() {
-    const {color} = this.props
-  
-    this.setState(()=>{
-      return {color}
-    });
-    // document.body.classList.add(color)
-  }
-
 
   render() {
-    const {children} = this.props;
-    const {color} = this.state;
+    const { children } = this.props;
     return (
-     <>
-      {color !== null &&  <div className={`m-0 p-0 position-absolute w-full min-h-screen flex flex-col align-center h-full bg-${color}-900`}>
-     {process.env.REACT_APP_SHOW_HEADER ==='true' && <Header color={color} />}
-      <div className={`flex flex-row  grow mx-auto justify-center flex items-center justify-center h-full p-4 text-${color}-100 `}>{children}</div>
-      {process.env.REACT_APP_SHOW_FOOTER ==='true' && <Footer color={color} />}
-    </div>}
-     </>
+      <ThemeContext.Consumer>
+        {({ currentColor, colorSelectedHandler }) => {
+         return ( <>
+          {
+            currentColor !== null && <div className={`m-0 p-0 position-absolute w-full min-h-screen flex flex-col align-center h-full bg-${currentColor}-900`}>
+              {process.env.REACT_APP_SHOW_HEADER === 'true' && <Header currentColor={currentColor} clickHandler={colorSelectedHandler} />}
+              <div className={`flex flex-row  grow mx-auto justify-center flex items-center justify-center h-full p-4 text-${currentColor}-100 `}>{children}</div>
+              {process.env.REACT_APP_SHOW_FOOTER === 'true' && <Footer currentColor={currentColor} />}
+            </div>
+          }
+          </>)
+        }
+        }</ThemeContext.Consumer>
     )
   }
 }
 
-Layout.defaultProps = {
-  color: 'white'
-}
+
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  color: PropTypes.string
 }
 export default Layout

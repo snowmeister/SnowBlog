@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import Layout from 'components/common/layout';
 
+import ThemeProvider from 'context/theme';
 /**
  * This is the main aPPlication component. Everything is rendered here.
  */
@@ -38,12 +39,12 @@ class App extends Component {
   };
 
   render() {
-    const { current_color, theme_colors, data } = this.state;
-    
+    const { data } = this.state;
+    console.log('we have the data', data);
     return (
-      <>
-        {data !== null && <Layout color={theme_colors[current_color].trim()}><p>{this.state.data}</p></Layout>}
-      </>
+      <ThemeProvider>
+        {data !== null && <Layout><p>{this.state.data}</p></Layout>}
+      </ThemeProvider>
     );
   }
 }

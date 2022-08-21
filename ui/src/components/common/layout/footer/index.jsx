@@ -12,8 +12,8 @@
 import React from 'react';
 
 
-export default function Footer({color}) {
+export default function Footer({currentColor}) {
   return (
-    <footer className={`mt-auto flex flex-row justify-center align-center p-4 text-${color}-100`}><div className="text-sm">{process.env.REACT_APP_NAME} -  <span className='opacity-50'>Content Copyright &copy;</span> {new Date().getFullYear()} <strong> {process.env.REACT_APP_SITE_CONTENT_OWNER}</strong> - <span className='opacity-50'>Powered by</span> SnowBlog</div></footer>
+    <footer className={`mt-auto flex flex-row justify-center align-center p-4 text-${currentColor}-100`}><div className="text-sm">{process.env.REACT_APP_NAME} -  <span className='opacity-50'>Content Copyright &copy;</span> {new Date().getFullYear()} <strong> {process.env.REACT_APP_SITE_CONTENT_OWNER}</strong> - <span className='opacity-50'>Powered by</span> SnowBlog</div></footer>
   )
 }

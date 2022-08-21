@@ -12,18 +12,20 @@
 
 import React from 'react';
 // import ColorSwatch from '../ColorSwatch';
+// import ColorSwatch from '../ColorSwatch';
 
 
-
-export default function ColorPicker() {
+export default function ColorPicker({colorSelectedHandler, currentColor}) {
   const colors = process.env.REACT_APP_THEME_COLORS.split(',');
 
   return (
-    <div className='absolute top-0 left-0 w-8 h-8 p-4'><ul>
+    <div className='absolute top-0 left-0 w-8 h-8 p-4 pt-8'><ul>
       {colors.map((color, index) => {
-        if (color !== 'current' && color !== 'tranparent') {
-          console.log('color', color);
-          return <li className={`block w-16 h-16 bg-${color}-900 p-3 border border-white  rounded-full shadow-lg m-2`} key={index}>{color}</li>
+        if (color !== 'current' && color !== 'black' && color !== 'transparent') {
+          return <li data-color={color} onClick={() => {
+            console.log('color', color);
+            colorSelectedHandler(color);
+          }} className={`block w-8 h-8  bg-${color}-900 text-${color}-100 rounded-full shadow m-2 cursor-pointer border border-1 border-${color}-100`} key={index}></li>
         }
         return null;
       })

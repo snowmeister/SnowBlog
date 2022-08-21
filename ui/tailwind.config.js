@@ -14,13 +14,13 @@ module.exports = {
     'text-4xl',
     'text-5xl',
     {
-      pattern: /bg-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink)-(900)/,
+      pattern: /bg-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(900)/,
     },
     {
-      pattern: /text-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink)-(100|900)/,
+      pattern: /text-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100|900)/,
     },
     {
-      pattern: /border-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink)-(100)/,
+      pattern: /border-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100)/,
     },
   ],
   theme: {
@@ -50,6 +50,7 @@ module.exports = {
       purple: colors.purple,
       fuchsia: colors.fuchsia,
       pink: colors.pink,
+      rose: colors.rose,
     },
   },
   plugins: [],
