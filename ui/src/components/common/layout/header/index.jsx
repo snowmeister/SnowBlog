@@ -18,7 +18,8 @@ export default function Header({currentColor, clickHandler}) {
     <ColorPicker currentColor={currentColor} colorSelectedHandler={(currentColor)=>{
       clickHandler(currentColor);
     }}  />
-    <div className={`flex flex-row justify-center border-${currentColor}-100 align-center p-4 text-5xl text-${currentColor}-100 opacity-80`}>{process.env.REACT_APP_NAME}</div>
+    <div className={`flex flex-row justify-center border-${currentColor}-100 align-center p-4 text-5xl text-${currentColor}-100 opacity-80`}>{process.env.REACT_APP_NAME} </div>
+    <small className={`text-${currentColor}-100 uppercase opacity-60 p-4 absolute right-0 font-bold text-lg`}>{currentColor}</small>
   </>
     
   )

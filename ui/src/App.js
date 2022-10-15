@@ -24,12 +24,12 @@ class App extends Component {
 
   componentDidMount() {
     this.callBackendAPI()
-      .then(res => this.setState({ data: res.express }))
+      .then(res => this.setState({ data: res }))
       .catch(err => console.log(err));
   }
   // fetching the GET route from the Express server which matches the GET route from server.js
   callBackendAPI = async () => {
-    const response = await fetch('/express_backend');
+    const response = await fetch('/images/colors/red');
     const body = await response.json();
 
     if (response.status !== 200) {
@@ -43,7 +43,7 @@ class App extends Component {
     console.log('we have the data', data);
     return (
       <ThemeProvider>
-        {data !== null && <Layout><p>{this.state.data}</p></Layout>}
+        {data !== null && <Layout><p>{this.state.data.content.color}</p></Layout>}
       </ThemeProvider>
     );
   }

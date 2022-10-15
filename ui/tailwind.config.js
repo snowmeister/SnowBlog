@@ -14,13 +14,13 @@ module.exports = {
     'text-4xl',
     'text-5xl',
     {
-      pattern: /bg-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100|900)/,
+      pattern: /bg-(black|brown|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100|500|900)/,
     },
     {
-      pattern: /text-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100|900)/,
+      pattern: /text-(black|brown|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100|500|900)/,
     },
     {
-      pattern: /border-(black|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100)/,
+      pattern: /border-(black|brown|white|gray|slate|emerald|indigo|yellow|zinc|neutral|stone|red|orange|amber|lime|green|teal|cyan|sky|blue|violet|purple|fuchsia|pink|rose)-(100|500|900)/,
     },
   ],
   theme: {
@@ -28,6 +28,7 @@ module.exports = {
       transparent: 'transparent',
       current: 'currentColor',
       black: colors.black,
+      brown: colors.brown,
       white: colors.white,
       gray: colors.gray,
       slate: colors.slate,
@@ -51,6 +52,22 @@ module.exports = {
       fuchsia: colors.fuchsia,
       pink: colors.pink,
       rose: colors.rose,
+    },
+    extend: {
+      colors: {
+        brown: {
+          50: '#fdf8f6',
+          100: '#f2e8e5',
+          200: '#eaddd7',
+          300: '#e0cec7',
+          400: '#d2bab0',
+          500: '#bfa094',
+          600: '#a18072',
+          700: '#977669',
+          800: '#846358',
+          900: '#43302b',
+        },
+      }
     },
   },
   plugins: [],

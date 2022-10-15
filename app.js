@@ -17,14 +17,19 @@ const images = require('./routes/images');
 const port = process.env.PORT || 5000; 
 
 
-
+app.use((err, req, res, next) => {
+  console.error(err.stack)
+  res.status(500).send('Something broke!')
+})
 
 app.use('/images', images)
 
+
+
+//The 404 Route (ALWAYS Keep this as the last route)
+app.get('*', function(req, res){
+  console.log({'error': 404, 'request': req.params});
+  res.status(404).json({content: null, status: 404, message: 'Resource not found'});
+});
 // This displays message that the server running and listening to specified port
 app.listen(port, () => console.log(`Listening on port ${port}`));
-
-// create a GET route
-app.get('/express_backend', (req, res) => { //Line 9
-  res.send({ express: 'YOUR EXPRESS BACKEND IS CONNECTED TO REACT' }); 
-}); 
